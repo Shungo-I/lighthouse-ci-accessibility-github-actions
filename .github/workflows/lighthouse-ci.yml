@@ -26,7 +26,7 @@ jobs:
           
       - name: Run Lighthouse CI
         run: |
-          npm install -g @lhci/cli@0.13.x
+          npm install && npm install -g @lhci/cli@0.14.x
           lhci autorun
         env:
           LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
@@ -42,8 +42,9 @@ jobs:
         uses: actions/github-script@v7
         with:
           script: |
-            const score = process.env.accessibility_score;
-            const issues = process.env.accessibility_issues;
+            const core = require('@actions/core');
+            const score = core.getInput('accessibility_score') || process.env.accessibility_score;
+            const issues = core.getInput('accessibility_issues') || process.env.accessibility_issues;
             
             let comment = `## 🔍 Lighthouse アクセシビリティレポート\n\n`;
             comment += `### スコア: ${score}%\n\n`;
