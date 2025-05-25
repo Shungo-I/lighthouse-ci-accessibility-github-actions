@@ -1,6 +1,33 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Next.js Todoアプリケーション
 
-## Getting Started
+このプロジェクトは、Next.jsを使用して構築されたモダンなTodoアプリケーションです。
+
+## 機能
+
+- Todoタスクの作成、表示、編集、削除
+- TypeScriptによる型安全性
+- モダンなUIデザイン
+- レスポンシブレイアウト
+
+## 技術スタック
+
+- [Next.js](https://nextjs.org) - Reactフレームワーク
+- TypeScript - 型安全性のための言語
+- TailwindCSS - スタイリング
+- Context API - 状態管理
+
+## プロジェクト構造
+
+```
+src/
+├── app/                   # アプリケーションのルーティングとページ
+├── components/           # 再利用可能なコンポーネント
+│   └── todos/           # Todo関連のコンポーネント
+├── lib/                 # ユーティリティと共有ロジック
+└── types/               # TypeScript型定義
+```
+
+## 始め方
 
 First, run the development server:
 
@@ -14,23 +41,24 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+[http://localhost:3000](http://localhost:3000)をブラウザで開いてアプリケーションを確認できます。
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## アプリケーションの編集
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+`app/page.tsx`を編集することでアプリケーションを更新できます。ファイルを編集すると、ページは自動的に更新されます。
 
-## Learn More
+このプロジェクトでは[`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts)を使用して[Geist](https://vercel.com/font)フォントを最適化しています。
 
-To learn more about Next.js, take a look at the following resources:
+## 詳細情報
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Next.jsについての詳細は以下のリソースをご覧ください：
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- [Next.js Documentation](https://nextjs.org/docs)
+- [Learn Next.js](https://nextjs.org/learn)
+- [Next.js GitHub Repository](https://github.com/vercel/next.js)
 
-## Deploy on Vercel
+## デプロイ
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Next.jsアプリケーションを最も簡単にデプロイする方法は、[Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme)を使用することです。
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+詳細は[Next.jsデプロイメントドキュメント](https://nextjs.org/docs/app/building-your-application/deploying)をご覧ください。
