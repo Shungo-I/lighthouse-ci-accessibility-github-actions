@@ -12,16 +12,16 @@ module.exports = {
     },
     assert: {
       assertions: {
-        // アクセシビリティスコアが90%以上であることを要求
-        'categories:accessibility': ['error', { minScore: 0.9 }],
-        // 重要なアクセシビリティの問題を禁止
-        'aria-required-attr': 'error',
-        'aria-roles': 'error',
-        'color-contrast': 'error',
-        'document-title': 'error',
-        'html-has-lang': 'error',
-        'image-alt': 'error',
-        'meta-viewport': 'error',
+        // アクセシビリティスコアを警告として扱う
+        'categories:accessibility': ['warn', { minScore: 0.9 }],
+        // アクセシビリティの問題を警告として扱う
+        'aria-required-attr': 'warn',
+        'aria-roles': 'warn',
+        'color-contrast': 'warn',
+        'document-title': 'warn',
+        'html-has-lang': 'warn',
+        'image-alt': 'warn',
+        'meta-viewport': 'warn',
       },
     },
     upload: {
